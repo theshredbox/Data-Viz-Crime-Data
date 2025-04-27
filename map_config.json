@@ -1,0 +1,434 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [
+        {
+          "dataId": [
+            "jtle3m"
+          ],
+          "id": "e05oou8nk",
+          "name": [
+            "datetime"
+          ],
+          "type": "timeRange",
+          "value": [
+            1722689063000,
+            1744003808601
+          ],
+          "plotType": {
+            "interval": "1-week",
+            "defaultTimeFormat": "L",
+            "type": "histogram",
+            "aggregation": "sum"
+          },
+          "animationWindow": "incremental",
+          "yAxis": null,
+          "view": "enlarged",
+          "speed": 0.2,
+          "syncTimelineMode": 1,
+          "enabled": true
+        }
+      ],
+      "layers": [
+        {
+          "id": "hy9txum",
+          "type": "cluster",
+          "config": {
+            "dataId": "jtle3m",
+            "label": "Day/Night",
+            "color": [
+              179,
+              173,
+              158
+            ],
+            "highlightColor": [
+              252,
+              242,
+              26,
+              255
+            ],
+            "columns": {
+              "lat": "Latitude",
+              "lng": "Longitude"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "clusterRadius": 40,
+              "colorRange": {
+                "colors": [
+                  "#00939C",
+                  "#E6FAFA"
+                ],
+                "name": "Uber Viz Sequential",
+                "type": "sequential",
+                "category": "Uber"
+              },
+              "radiusRange": [
+                1,
+                40
+              ],
+              "colorAggregation": "mode"
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center",
+                "outlineWidth": 0,
+                "outlineColor": [
+                  255,
+                  0,
+                  0,
+                  255
+                ],
+                "background": false,
+                "backgroundColor": [
+                  0,
+                  0,
+                  200,
+                  255
+                ]
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "day_night",
+              "type": "string"
+            },
+            "colorScale": "ordinal"
+          }
+        },
+        {
+          "id": "aw6bt5j",
+          "type": "grid",
+          "config": {
+            "dataId": "jtle3m",
+            "label": "Grid Plot",
+            "color": [
+              30,
+              150,
+              190
+            ],
+            "highlightColor": [
+              252,
+              242,
+              26,
+              255
+            ],
+            "columns": {
+              "lat": "Latitude",
+              "lng": "Longitude"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "worldUnitSize": 0.07,
+              "colorRange": {
+                "colors": [
+                  "#223F9A",
+                  "#892B8D",
+                  "#C00B68",
+                  "#EA4242",
+                  "#FF9219",
+                  "#FAE300"
+                ],
+                "name": "UberPool",
+                "type": "diverging",
+                "category": "Uber"
+              },
+              "coverage": 1,
+              "sizeRange": [
+                0,
+                500
+              ],
+              "percentile": [
+                0,
+                100
+              ],
+              "elevationPercentile": [
+                0,
+                100
+              ],
+              "elevationScale": 7.1,
+              "enableElevationZoomFactor": true,
+              "fixedHeight": false,
+              "colorAggregation": "mode",
+              "sizeAggregation": "count",
+              "enable3d": true
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center",
+                "outlineWidth": 0,
+                "outlineColor": [
+                  255,
+                  0,
+                  0,
+                  255
+                ],
+                "background": false,
+                "backgroundColor": [
+                  0,
+                  0,
+                  200,
+                  255
+                ]
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "Crime Type",
+              "type": "string"
+            },
+            "colorScale": "ordinal",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        },
+        {
+          "id": "l5hray",
+          "type": "geojson",
+          "config": {
+            "dataId": "jtle3m",
+            "columnMode": "geojson",
+            "label": "crime_data",
+            "color": [
+              130,
+              154,
+              227
+            ],
+            "highlightColor": [
+              252,
+              242,
+              26,
+              255
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": null,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#4C0035",
+                  "#880030",
+                  "#B72F15",
+                  "#D6610A",
+                  "#EF9100",
+                  "#FFC300"
+                ]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#4C0035",
+                  "#880030",
+                  "#B72F15",
+                  "#D6610A",
+                  "#EF9100",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [
+                0,
+                10
+              ],
+              "radiusRange": [
+                0,
+                50
+              ],
+              "heightRange": [
+                0,
+                500
+              ],
+              "elevationScale": 5,
+              "stroked": false,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false,
+              "fixedHeight": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center",
+                "outlineWidth": 0,
+                "outlineColor": [
+                  255,
+                  0,
+                  0,
+                  255
+                ],
+                "background": false,
+                "backgroundColor": [
+                  0,
+                  0,
+                  200,
+                  255
+                ]
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantile",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        }
+      ],
+      "effects": [],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "jtle3m": [
+              {
+                "name": "Report ID",
+                "format": null
+              },
+              {
+                "name": "datetime",
+                "format": null
+              },
+              {
+                "name": "Description",
+                "format": null
+              },
+              {
+                "name": "Status",
+                "format": null
+              },
+              {
+                "name": "Location",
+                "format": null
+              }
+            ]
+          },
+          "compareMode": false,
+          "compareType": "absolute",
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        },
+        "geocoder": {
+          "enabled": false
+        },
+        "coordinate": {
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "overlayBlending": "normal",
+      "splitMaps": [],
+      "animationConfig": {
+        "currentTime": null,
+        "speed": 1
+      },
+      "editor": {
+        "features": [],
+        "visible": true
+      }
+    },
+    "mapState": {
+      "bearing": 24,
+      "dragRotate": true,
+      "latitude": 39.17419035029131,
+      "longitude": -86.52119505020313,
+      "pitch": 50,
+      "zoom": 14.096117833833905,
+      "isSplit": false,
+      "isViewportSynced": true,
+      "isZoomLocked": false,
+      "splitMapViewports": []
+    },
+    "mapStyle": {
+      "styleType": "dark-matter",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true,
+        "3d building": false
+      },
+      "threeDBuildingColor": [
+        15.035172933000911,
+        15.035172933000911,
+        15.035172933000911
+      ],
+      "backgroundColor": [
+        0,
+        0,
+        0
+      ],
+      "mapStyles": {}
+    },
+    "uiState": {
+      "mapControls": {
+        "mapLegend": {
+          "active": true
+        }
+      }
+    }
+  }
+}
